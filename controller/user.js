@@ -18,7 +18,7 @@ exports.submitPage = (req,res)=>{
           if(weather.main == undefined){
             res.render('user', {weather: null, error: 'Error, please try again'});
           } else {
-            let weatherText = `It's ${weather.main.temp} degree C in ${weather.name}!`;
+            let weatherText = `It's ${weather.main.temp} degree in ${weather.name}!`;
             // let weatherText2 = (((Number (weatherText)) - 32) / (1.8000))
             res.render('user', {weather: weatherText, error: null});
           }
